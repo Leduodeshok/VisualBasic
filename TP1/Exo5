@@ -1,0 +1,23 @@
+Option Explicit
+Private Sub Exo1()
+
+Dim n%
+
+Dim res#
+Dim af$
+
+n = CInt(InputBox("Saisir entier N", "Saisie"))
+
+If (n > 0) Then
+    res = CDbl(n) * 2#
+Else
+    res = CDbl(n) / 2
+End If
+
+af = " Le resultat est " & Format(res, "0.000")
+
+Call MsgBox(af, vbInformation, "Resultat de l'operation")
+
+
+
+End Sub
