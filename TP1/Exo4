@@ -1,0 +1,21 @@
+Option Explicit
+Private Sub Exo1()
+
+Dim n%
+Dim m#
+Dim res#
+Dim af$
+
+n = CInt(InputBox("Saisir entier N", "Saisie"))
+m = CDbl(InputBox("Saisir reel M", "Saisie"))
+
+res = (m + CDbl(n)) / 2#
+
+af = " Le resultat est " & Format(res, "0.000")
+
+Call MsgBox(af, vbInformation, "Resultat de l'operation")
+
+
+
+End Sub
+
