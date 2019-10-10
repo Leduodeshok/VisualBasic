@@ -1,0 +1,33 @@
+Option Explicit
+Private Sub revision2()
+
+Dim m%
+Dim res#(100)
+Dim i%
+Dim af$
+Dim cpt#(100)
+
+cpt(0) = 0
+
+Do
+m = CInt(InputBox("saisir entier m", "init"))
+Loop While Not (m > 0 And m < 100)
+
+For i = 1 To m Step 1
+    res(i) = 1# / CDbl(i)
+Next
+
+For i = 1 To m Step 1
+    cpt(i) = cpt(i - 1) + res(i)
+Next
+
+af = " les inverses : "
+
+For i = 1 To m Step 1
+    af = af & vbCr & " l'inverse de " & i & " est " & Format(res(i), "0.000") & " et la somme est " & Format(cpt(i), "0.000")
+Next
+
+Call MsgBox(af, vbInformation, " resultat ")
+
+
+End Sub
