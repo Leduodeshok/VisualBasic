@@ -1,0 +1,26 @@
+Option Explicit
+Private Sub exo3()
+
+Dim m%
+Dim af$
+Dim res&(100)
+Dim i%
+
+Do
+m = CInt(InputBox("Saisir m positif pls", "resultat"))
+Loop While Not (m > 0 And m < 100)
+
+For i% = 0 To m Step 1
+    res(i) = i ^ 3
+Next
+
+af = "Les cubes :"
+
+For i = 0 To m Step 1
+    af = af + vbCr & i & "^3 = " & res(i)
+Next
+
+Call MsgBox(af, vbInformation, "les carrés")
+
+End Sub
+
