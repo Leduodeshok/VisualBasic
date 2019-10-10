@@ -1,0 +1,19 @@
+Option Explicit
+Private Sub exo2()
+
+Dim m%
+Dim af$
+Dim res&
+Dim i%
+
+m = CInt(InputBox("Saisir m positif pls", "resultat"))
+af = ""
+
+For i% = 0 To m Step 1
+    res = i ^ 2
+    af = af & " le carre de " & i & " est " & Format(res, "0.0") & vbCr
+Next
+
+Call MsgBox(af, vbInformation, "les carrés")
+
+End Sub
