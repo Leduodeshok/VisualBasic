@@ -1,0 +1,48 @@
+Option Explicit
+Private Sub Exo9()
+
+Dim a%
+Dim b%
+Dim c%
+Dim x1#
+Dim x2#
+Dim res#
+Dim delta#
+Dim af$
+
+a = CInt(InputBox("Saisir entier a", "Saisie"))
+b = CInt(InputBox("Saisir entier b", "Saisie"))
+c = CInt(InputBox("Saisir entier c", "Saisie"))
+
+If (a = 0) Then
+
+    If (b = 0) Then
+        If (c = 0) Then
+            af = " pas de solution"
+        Else
+            af = "Le resultat est : " + CStr(-c)
+        End If
+    Else
+        res = CDbl(-c) / CDbl(b)
+        af = "Le resultat est " & Format(res, "0.000")
+    End If
+Else
+    delta = (CDbl(b) ^ 2#) - (4 * CDbl(a) * CDbl(c))
+    If (delta > 0) Then
+        x1 = (CDbl(-b) - Sqr(delta)) / 2# * CDbl(a)
+        x2 = (CDbl(-b) + Sqr(delta)) / 2# * CDbl(a)
+        af = " le resultat est : " & vbCr & " x1 = " & Format(x1, "0.000") & vbCr & "x2= " & Format(x2, "0.000")
+        
+    Else
+        If (delta = 0) Then
+            res = CDbl(-b) / 2# * a
+            af = "Le resultat est " & Format(res, "0.000")
+        Else
+            af = " pas de solution reels"
+        End If
+    End If
+End If
+ 
+Call MsgBox(af, vbInformation, "Resultat")
+
+End Sub
