@@ -1,0 +1,32 @@
+Option Explicit
+Private Sub Exo7()
+
+Dim n%
+Dim m%
+Dim res#
+Dim af$
+
+n = CInt(InputBox("Saisir entier n", "Saisie"))
+m = CInt(InputBox("Saisir entier m", "Saisie"))
+
+If (n > m) Then
+    If (m = 0) Then
+        af = "division par zero"
+    Else
+        
+        res = CDbl(n) / CDbl(m)
+        af = " le resultat est " & Format(res, "0.000")
+    End If
+Else
+    If (n = m) Then
+        af = "egalité"
+    Else
+        res = CDbl(n) * CDbl(m)
+        af = " le resultat est " & Format(res, "0.000")
+    End If
+End If
+
+
+Call MsgBox(af, vbInformation, "Resultat de l'operation")
+End Sub
+
