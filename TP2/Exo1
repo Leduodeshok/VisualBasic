@@ -1,0 +1,26 @@
+Option Explicit
+Private Sub exo1()
+
+Dim n%
+Dim m&
+Dim res&
+Dim af$
+
+n = CInt(InputBox("Saisir n", "initialisation"))
+m = CLng(InputBox("Saisir m", "initialisation"))
+
+If (n > m) Then
+    res = CLng(n) - m
+    af = " le resultat est " & Format(res, "0.0")
+Else
+    If (n = m) Then
+        af = " egalité"
+    Else
+        res = CInt(n) * m
+        af = "Le resultat est " & Format(res, "0.0")
+    End If
+End If
+
+Call MsgBox(af, vbInformation, "resultat")
+
+End Sub
