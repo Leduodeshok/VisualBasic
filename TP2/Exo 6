@@ -1,0 +1,27 @@
+Option Explicit
+Private Sub exo6()
+
+Dim n%
+Dim res&(100)
+Dim af$
+Dim i&
+
+res(0) = 1
+
+Do
+    n = CInt(InputBox("saisir n positif ", "saisie"))
+Loop While Not (n > 0)
+
+For i = 1 To n + 1 Step 1
+    res(i) = res(i - 1) * i
+Next
+
+af = " les fact : "
+
+For i = 1 To n + 1 Step 1
+    af = af & vbCr & res(i) & " pour i = " & i
+Next
+
+Call MsgBox(af, vbInformation, " resultat ")
+
+End Sub
