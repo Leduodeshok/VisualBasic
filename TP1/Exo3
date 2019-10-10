@@ -1,0 +1,27 @@
+Option Explicit
+Private Sub Exo1()
+
+Dim W%
+Dim X&
+Dim Y!
+Dim Z#
+
+Dim af$
+Dim ta$
+
+W = CInt(InputBox("Saisir W", "Saisie"))
+X = CInt(InputBox("Saisir X", "Saisie"))
+Y = CInt(InputBox("Saisir Y", "Saisie"))
+Z = CInt(InputBox("Saisir Z", "Saisie"))
+
+
+af = " Le resultat en binaire de N est : " & Application.WorksheetFunction.Dec2Bin(n) & vbCr & _
+"Le resultat en binaire de M est : " & Application.WorksheetFunction.Dec2Bin(m) & vbCr & _
+"le resultat en octal de O est : " & Application.WorksheetFunction.Dec2Oct(O) & " et en Hexa : " & Application.WorksheetFunction.Dec2Hex(O)
+
+
+Call MsgBox(af, vbInformation, "Resultat de l'operation")
+
+
+End Sub
+
