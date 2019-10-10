@@ -1,0 +1,28 @@
+Option Explicit
+Private Sub revision1()
+
+Dim n%
+Dim x#
+Dim r#
+Dim af$
+
+n = CInt(InputBox("saisir entier n", "init"))
+x = CInt(InputBox("saisir reel x ", "init"))
+
+If (x > 255#) Then
+    r = x * CDbl(n)
+    af = "cas x> 255 donne " & Format(r, "0.0")
+    
+Else
+    If (x >= -255) Then
+        r = Abs(x) ^ CDbl(n)
+        af = "cas  255>= x >= -255 donne " & Format(r, "0.0")
+    Else
+        r = x - CDbl(n)
+        af = "cas  x< -255 donne " & Format(r, "0.0")
+    End If
+End If
+
+Call MsgBox(af, vbInformation, "resultat")
+
+End Sub
