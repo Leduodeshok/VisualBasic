@@ -6,9 +6,8 @@ Dim af$
 Dim res&(100)
 Dim i%
 
-Do
 m = CInt(InputBox("Saisir m positif pls", "resultat"))
-Loop While Not (m > 0 And m < 100)
+
 
 For i% = 0 To m Step 1
     res(i) = i ^ 2
