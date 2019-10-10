@@ -1,0 +1,25 @@
+Option Explicit
+Private Sub Exo8()
+
+Dim b%
+Dim c%
+Dim res#
+Dim af$
+
+b = CInt(InputBox("Saisir entier b", "Saisie"))
+c = CInt(InputBox("Saisir entier c", "Saisie"))
+
+If (b = 0) Then
+    If (c = 0) Then
+        af = " pas de solution"
+    Else
+        af = "Le resultat est : " & CStr(-c)
+    End If
+Else
+    res = CDbl(-c) / CDbl(b)
+    af = "Le resultat est " & Format(res, "0.000")
+End If
+
+Call MsgBox(af, vbInformation, "Resultat")
+
+End Sub
