@@ -7,17 +7,17 @@ Dim i%
 Dim af$
 Dim cpt#(100)
 
-cpt(0) = 0
+cpt(0) = 0#
 
 Do
 m = CInt(InputBox("saisir entier m", "init"))
 Loop While Not (m > 0 And m < 100)
 
-For i = 1 To m Step 1
+For i% = 1 To m Step 1
     res(i) = 1# / CDbl(i)
 Next
 
-For i = 1 To m Step 1
+For i% = 1 To m Step 1
     cpt(i) = cpt(i - 1) + res(i)
 Next
 
