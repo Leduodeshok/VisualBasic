@@ -14,7 +14,7 @@ If (x > 255#) Then
     af = "cas x> 255 donne " & Format(r, "0.0")
     
 Else
-    If (x >= -255) Then
+    If (x >= -255#) Then
         r = Abs(x) ^ CDbl(n)
         af = "cas  255>= x >= -255 donne " & Format(r, "0.0")
     Else
