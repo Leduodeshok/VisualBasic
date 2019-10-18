@@ -9,8 +9,10 @@ Dim i&
 
 Do
 m = CLng(InputBox("saisir m", "saisie", "5"))
+Loop While Not m > 0
+Do
 n = CLng(InputBox("saisir n ", "saisie", "-5"))
-Loop While Not (m > 0 And n <= 0 And (m - n) < 151)
+Loop While Not (n <= 0 And (m - n) < 151)
 
 For i = 0 To m - n Step 1
 
@@ -21,7 +23,7 @@ Next
 af = "Les doubles : " & vbCr
 
 For i = 0 To m - n Step 1
-    af = af + " le double de " & i + n & " est " & Format(r(i), "0.00") & vbCr
+    af = af + " le double de " & CStr(i + n) & " est " & Format(r(i), "0.00") & vbCr
 Next
 
 Call MsgBox(af, vbInformation, "resul")
