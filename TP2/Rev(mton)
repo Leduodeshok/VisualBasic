@@ -27,7 +27,7 @@ Next
 
 af = " les inverses : "
 
-For i = 1 To m - n Step 1
+For i% = 1 To m - n Step 1
     af = af & vbCr & " l'inverse de " & i + n & " est " & Format(res(i), "0.000") & " et la somme est " & Format(cpt(i), "0.000")
 Next
 
