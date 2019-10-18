@@ -16,7 +16,7 @@ Next
 
 af = "Les cubes :"
 
-For i = 0 To m Step 1
+For i% = 0 To m Step 1
     af = af + vbCr & i & "^3 = " & res(i)
 Next
 
