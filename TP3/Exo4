@@ -9,6 +9,7 @@ Dim i&
 
 Do
 m = CLng(InputBox("saisir m", "saisie", "5"))
+Loop While 
 n = CLng(InputBox("saisir n ", "saisie", "-5"))
 Loop While Not (m > 0 And n <= 0 And (m - n) < 151)
 
