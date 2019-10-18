@@ -20,6 +20,9 @@ For i = 0 To m - n Step 1
 Next
 
 af = "Les doubles : " & vbCr
+
+Application.Worksheets(1).Cells.clear
+
 Application.Worksheets(1).Cells(1, 1).Value = "x"
 Application.Worksheets(1).Cells(1, 2).Value = "y"
 
