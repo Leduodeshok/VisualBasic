@@ -12,13 +12,13 @@ n = CInt(InputBox("saisir n positif ", "saisie"))
 m = CInt(InputBox("Saisir m positif ", "saisie"))
 Loop While Not (m > 0 And m - n <= 100 And m > n)
 
-For i = 0 To m - n Step 1
+For i% = 0 To m - n Step 1
     res(i) = (n + i) ^ 3
 Next
 
 af = "les carrés : "
 
-For i = 0 To m - n Step 1
+For i% = 0 To m - n Step 1
     af = af & vbCr & i & n & " ^3 = " & res(i)
 Next
 
