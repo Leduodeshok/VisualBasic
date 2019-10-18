@@ -14,13 +14,13 @@ Do
     n = CInt(InputBox("saisir n positif ", "saisie"))
 Loop While Not (n > 0)
 
-For i = 1 To n Step 1
-    res(i) = res(i - 1) * i
+For i% = 1 To n Step 1
+    res(i) = res(i - 1%) * i
 Next
 
 af = " les fact : " & vbCr & "0! = 1"
 
-For i = 1 To n Step 1
+For i% = 1 To n Step 1
     af = af & vbCr & i & "! = " & res(i)
 Next
 
