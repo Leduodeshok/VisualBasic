@@ -1,0 +1,29 @@
+Option Explicit
+
+Private Sub exo1()
+
+Dim n%
+Dim x!
+Dim r!
+Dim af$
+
+n = CInt(InputBox("saisir n", "saisie"))
+x = CSng(InputBox("saisir x", "saisie"))
+
+Call Moyenne(n, x, r)
+
+af = " le resultat est " + Format(r, "0.0000")
+
+Call MsgBox(af, vbInformation, " resultat")
+
+
+
+End Sub
+
+
+Public Sub Moyenne(ByVal n%, ByVal x!, ByRef r!)
+
+    r = (CSng(n) + x) / 2!
+
+End Sub
+
