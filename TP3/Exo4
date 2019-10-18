@@ -1,0 +1,42 @@
+Option Explicit
+Private Sub Exo3()
+
+Dim n&
+Dim m&
+Dim r#(150)
+Dim af$
+Dim i&
+
+Do
+m = CLng(InputBox("saisir m", "saisie", "5"))
+n = CLng(InputBox("saisir n ", "saisie", "-5"))
+Loop While Not (m > 0 And n <= 0 And (m - n) < 151)
+
+For i = 0 To m - n Step 1
+
+    r(i) = Fdou(n + i, 2&)
+    
+Next
+
+af = "Les doubles : " & vbCr
+Application.Worksheets(1).Cells(1, 1).Value = "x"
+Application.Worksheets(1).Cells(1, 2).Value = "y"
+
+For i = 0 To m - n Step 1
+    af = af + " le double de " & i + n & " est " & Format(r(i), "0.00") & vbCr
+    Application.Worksheets(1).Cells(i + 2, 1).Value = i
+    Application.Worksheets(1).Cells(i + 2, 2).Value = r(i)
+Next
+
+Call MsgBox(af, vbInformation, "resul")
+
+
+End Sub
+
+Public Function Fdou!(ByVal x&, ByVal y&)
+
+Fdou = CSng(x) * CSng(y)
+
+End Function
+
+
