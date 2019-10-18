@@ -1,0 +1,26 @@
+Option Explicit
+Private Sub exo2()
+
+Dim a%
+Dim b!
+Dim af$
+Dim c!
+
+a = CInt(InputBox("Saisir a", "init"))
+b = CSng(InputBox("saisir b", "init"))
+
+c = produit(a, b)
+
+af = " le resultat est " + Format(c, "0.00")
+
+Call MsgBox(af, vbInformation, "resultat")
+
+End Sub
+
+
+Public Function produit!(ByVal x%, ByVal y!)
+
+produit = CSng(x) * y
+
+
+End Function
