@@ -1,0 +1,50 @@
+Option Explicit
+Private Sub test()
+
+Dim n&
+Dim i&
+Dim r!(150)
+Dim af$
+Dim cpt!
+
+Do
+n = CLng(InputBox("saisir n =/= 0", "saisie", "5", 120, 120))
+Loop While (n <> 0 And Abs(n) > 150)
+
+If (n > 0) Then
+    For i = 0 To n Step 1
+        r(i) = Sqr(CSng(i))
+    Next
+    
+    af = "Les racines sont "
+    Application.Worksheets(1).Cells.Clear
+    Application.Worksheets(1).Cells(1, 1) = "Les racine sont :"
+    
+    For i = 0 To n Step 1
+        af = af & vbCr & " pour " & CStr(i) & " est " & Format(r(i), "0.000")
+        Application.Worksheets(1).Cells(2 + i, 1).Value = r(i)
+    Next
+    
+Else
+    cpt = 0!
+    For i = 0 To Abs(n) Step 1
+        r(i) = (CSng(i)) ^ 2!
+        cpt = cpt + r(i)
+    Next
+    
+    af = "Les carrés sont : "
+    Application.Worksheets(1).Cells.Clear
+    Application.Worksheets(1).Cells(1, 1) = "les carres sont :"
+    For i = 0 To Abs(n) Step 1
+        af = af & vbCr & " pour " & CStr(i) & " est " & Format(r(i), "0.000")
+        Application.Worksheets(1).Cells(2 + i, 1).Value = r(i)
+    Next
+    
+    af = af & vbCr & "La somme est : " & Format(cpt, "0.000")
+    Application.Worksheets(1).Cells(2 + Abs(n), 1).Value = "Somme " & cpt
+    
+End If
+
+Call MsgBox(af, vbInformation, "fin")
+
+
