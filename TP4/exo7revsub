@@ -1,0 +1,34 @@
+Option Explicit
+Private Sub Exo7()
+
+Dim n%
+Dim m%
+Dim r!(151)
+Dim i%
+Dim af$
+
+Do
+n = CInt(InputBox("saisir n", "saisie"))
+m = CInt(InputBox("saisir m", "saisie"))
+Loop While Not (m > n And m - n < 151)
+
+For i = 0 To m - n Step 1
+    r(i) = Fcalcul(i + n)
+Next
+
+af = "le resultat est :"
+
+For i = 0 To m - n Step 1
+    af = af & vbCr & CStr(r(i))
+Next
+
+Call MsgBox(af, vbInformation, "fin")
+    
+
+End Sub
+
+Private Function Fcalcul(ByVal x%)
+
+Fcalcul = 2! * CLng(x) / 5!
+
+End Function
