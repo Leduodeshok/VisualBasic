@@ -1,10 +1,10 @@
 Option Explicit
 Private Sub Exo7()
 
-Dim n%
-Dim m%
+Dim n&
+Dim m&
 Dim r!(151)
-Dim i%
+Dim i&
 Dim af$
 
 Do
